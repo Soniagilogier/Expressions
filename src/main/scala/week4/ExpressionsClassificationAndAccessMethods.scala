@@ -1,7 +1,9 @@
 package week4
 
-
-object Expressions extends App {
+/** Expression object definition with classification and access methods
+ *  Drawbacks: quadratic explosion
+ */
+object ExpressionsClassificationAndAccessMethods extends App {
 
   /** Trait Expr defines the structure of any kind of expressions**/
   trait Expr {

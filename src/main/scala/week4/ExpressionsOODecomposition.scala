@@ -1,5 +1,8 @@
 package week4
 
+/** Expression object definition with Object-oriented Decomposition
+ *  Drawbacks: does not always work, need to touch all classes to add a new method
+ */
 object ExpressionsOODecomposition extends App {
 
   /** Trait Expr defines the structure of any kind of expressions**/

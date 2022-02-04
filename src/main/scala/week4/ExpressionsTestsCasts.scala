@@ -1,5 +1,8 @@
 package week4
 
+/** Expression object definition with Tests and Casts
+ *  Drawbacks: unsafe, low-level
+ */
 object ExpressionsTestsCasts extends App {
 
   /** Trait Expr defines the structure of any kind of expressions**/

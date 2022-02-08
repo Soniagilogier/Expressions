@@ -89,7 +89,6 @@ object ExpressionsPatternMatching extends App {
 
   println("Testing show method: " + show(new Sum(new Number(1), new Number(44))))
   println("2nd test: " + show(new Sum(new Prod(new Number(2), new Number(5)), new Number(7))))
-
-
+  println("3rd test: " + show(new Number(2)) + show(new Var("x")))
 
 }

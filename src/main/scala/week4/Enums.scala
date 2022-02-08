@@ -4,13 +4,11 @@ package week4
 object Enums {
 
   // using scala traits as enums
-  trait Expr {
-    object Expr{
-      case class Var(s: String) extends Expr
-      case class Number(n: Int) extends Expr
-      case class Sum(e1: Expr, e2: Expr) extends Expr
-      case class Prod(e1: Expr, e2: Expr) extends Expr
-    }
+  sealed trait Expr {
+    case class Var(s: String) extends Expr
+    case class Number(n: Int) extends Expr
+    case class Sum(e1: Expr, e2: Expr) extends Expr
+    case class Prod(e1: Expr, e2: Expr) extends Expr
   }
 
   // Scala 3 offers also the enum type
@@ -21,8 +19,6 @@ object Enums {
   case Sum(e1: Expr, e2: Expr)
   case Prod(e1: Expr, e2: Expr)
    **/
-
-
 
   // enum with simple values
   object Col extends Enumeration {

@@ -26,3 +26,12 @@ listA.contains(3)
 listC.init
 listC.last
 
+// Pair definition
+val pair = ("Answer", 24)
+
+// We could write:
+val (label, value) = pair
+
+// or...
+val label = pair._1
+val value = pair._2

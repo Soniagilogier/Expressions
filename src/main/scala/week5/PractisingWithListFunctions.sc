@@ -35,3 +35,10 @@ val (label, value) = pair
 // or...
 val label = pair._1
 val value = pair._2
+
+// practising with pairs
+val splitList = listA.splitAt(3)
+splitList._1
+splitList._2
+
+val (_, second) = splitList

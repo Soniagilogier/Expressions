@@ -43,6 +43,12 @@ object ListMethods extends App {
   }
 
   // Implementation of flatten list
-  def flatten(xs: List[Any]): List[Any] = ???
+  def flatten(xs: Any): List[Any] = xs match {
+    case Nil => Nil
+    case y :: ys => flatten(y) ++ flatten(ys)
+    case _ => xs :: Nil
+  }
 
+  // Testing flatten method
+  println(flatten(List(List(1, 2), 3, List(4,5))))
 }

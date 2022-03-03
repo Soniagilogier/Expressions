@@ -4,7 +4,9 @@ import math.Ordering
 
 object TuplesAndPairs extends App {
 
-  // msort splits a list into 2 equal part, sorts each of them and merges them again
+  /**
+   *  msort splits a list into 2 equal part, sorts each of them and merges them again
+   */
 
   // STEP 5: polymorphic implementation with implicit parameter or as Scala.math.Ordering[T] as ordering function for any kind of data
   //         So we can now remove the explicit ord parameter when calling the msort method as the compiler already infers it. (see previous steps below)

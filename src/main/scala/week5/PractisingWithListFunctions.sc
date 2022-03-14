@@ -70,3 +70,22 @@ fruits.dropWhile(x => !x.startsWith("o"))
 nums.span(x => x < 3)
 fruits.span(x => !x.startsWith("o"))
 
+nums.sum
+nums.reduceLeft((x, y) => x + y)
+nums.product
+nums.reduceLeft((x, y) => x * y)
+nums.sorted.reverse.reduceLeft((x,y) => x *2 / y)
+nums.reduceLeft((x, y) => x - y)
+
+
+
+// Other tests
+val toRemove = " !".toSet
+val frase: String = "Hola Mon!"
+frase.filterNot(toRemove)
+
+val validChars = """[a-zA-Z0-9]+\w*""".r
+validChars.matches("thisIsAnId")
+validChars.matches("aé")
+validChars.matches("a_")
+validChars.matches("a-")

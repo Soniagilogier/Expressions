@@ -51,4 +51,31 @@ object ListMethods extends App {
 
   // Testing flatten method
   println(flatten(List(List(1, 2), 3, List(4,5))))
+
+
+  // Implementation of reduceLeft method
+  def reduceLeft[T](xs: List[T], op: (T, T) => T): T = xs match {
+    case Nil => throw new Error("Nil.reduceLeft")
+    case x :: xs => op(x, xs.reduceLeft(op))
+  }
+
+  // Implementation of foldLeft method
+  def foldLeft[U, T](z: U)(xs: List[T], op: (U,T) => U): U = xs match {
+    case Nil => z
+    case x :: xs => (xs foldLeft op(z, x))(op)
+  }
+
+  // Implementation of reduceRight method
+  def reduceRight[T](xs: List[T], op: (T, T) => T): T = xs match {
+    case Nil => throw new Error("Nil.reduceLeft")
+    case x :: Nil => x
+    case x :: xs => op(x, xs.reduceRight(op))
+  }
+
+  // Implementation of foldLeft method
+  def foldRight[U, T](z: U)(xs: List[T], op: (T,U) => U): U = xs match {
+    case Nil => z
+    case x :: xs => op(x, (xs.foldRight(z))(op))
+  }
+
 }

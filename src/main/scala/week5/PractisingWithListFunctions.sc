@@ -72,11 +72,26 @@ fruits.span(x => !x.startsWith("o"))
 
 nums.sum
 nums.reduceLeft((x, y) => x + y)
+nums.reduceRight((x, y) => x + y)
+
 nums.product
 nums.reduceLeft((x, y) => x * y)
-nums.sorted.reverse.reduceLeft((x,y) => x *2 / y)
-nums.reduceLeft((x, y) => x - y)
+nums.reduceRight((x, y) => x * y)
 
+nums.sorted.reverse.reduceLeft((x,y) => x * 2 / y)
+
+nums.reduceLeft((x, y) => x - y)
+nums.reduceRight((x, y) => x - y)
+
+
+
+nums.foldLeft(0)(_+_)
+nums.foldRight(0)(_+_)
+
+nums.foldLeft(1)(_*_)
+nums.foldRight(1)(_*_)
+
+listA.foldRight(listB)(_ :: _)
 
 
 // Other tests

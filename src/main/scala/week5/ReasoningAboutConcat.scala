@@ -13,7 +13,7 @@ object ReasoningAboutConcat {
     case z :: zs => List(z, concat(zs, ys))     // 2nd Clause -> (x :: xs1) ++ ys = x :: (xs1 ++ ys)
   }
 
-  // Base case: Nil
+  // Base case: Nil --> (Nil ++ ys) ++ zs = Nil ++ (ys ++ zs)
   //
   // For the left-hand side: (Nil ++ ys) ++ zs -> by 1st clause of concat we can reduce it to: ys ++ zs
   //
@@ -24,7 +24,7 @@ object ReasoningAboutConcat {
   // The base case is established.
 
 
-  // Induction step: x :: xs
+  // Induction step: x :: xs --> ((x :: xs) ++ ys) ++ zs = (x :: xs) ++ (ys ++ zs)
   //
   // For the left-hand side: ((x :: xs) ++ ys) ++ zs -> by 2nd clause of concat we can reduce it to:
   //                                                                                step 1 --> (x :: (xs ++ ys)) ++ zs

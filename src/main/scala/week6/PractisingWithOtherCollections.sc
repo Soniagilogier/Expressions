@@ -45,4 +45,12 @@ xs.max
 xs.min
 ys.max
 
-//Practising
+//Practising with pairs
+val n = 7 // i.e.
+val pairs = (1 until n) map (i =>
+  (1 until i) map (j => (i, j)))
+
+val combinedPairs = ((1 until n) map (i =>
+  (1 until i) map (j => (i, j)))).flatten
+
+val flatMappedPairs = (1 until n) flatMap  (i => (1 until i) map (j => (i, j)))

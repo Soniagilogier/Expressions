@@ -20,7 +20,6 @@ object OtherCollections extends App {
   // (1 to M) flatMap (x => (1 to N) map (y => (x, y)))
   def combine(xs: Vector[String], ys: Vector[String]): Vector[(Char, Char)] = {
     xs.flatten flatMap(x => ys.flatten map (y => (x, y)))
-    // xs.flatten zip ys.flatten
   }
 
   def pair(xs: Vector[String], ys: Vector[String]): Vector[(Char, Char)] = {

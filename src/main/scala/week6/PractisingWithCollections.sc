@@ -54,3 +54,13 @@ val combinedPairs = ((1 until n) map (i =>
   (1 until i) map (j => (i, j)))).flatten
 
 val flatMappedPairs = (1 until n) flatMap  (i => (1 until i) map (j => (i, j)))
+
+// Sets definitions
+val fruit = Set("apple", "banana", "pear")
+val numSet = (1 to 6).toSet
+
+// Practising with sets
+s map (_ + 2)
+fruit filter (_.startsWith("app"))
+s.nonEmpty
+fruit.contains("banana")

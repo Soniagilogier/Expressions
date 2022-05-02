@@ -29,4 +29,6 @@ Collections tree:
    >   - Sets do not have duplicate members.
    >   - The fundamental operation on Sets is contains. 
         
+   >* A MAP of type Map[Key, Value] is a data structure that associates keys of type Key with values of type Value. 
    
+   > 
